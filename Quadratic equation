@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class quadratic{
+	public static void main(String[] args){
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("Coefficient a: ");
+		double a=scanner.nextDouble();
+		System.out.print("Coefficient b: ");
+		double b=scanner.nextDouble();
+		System.out.print("Constant c: ");
+		double c=scanner.nextDouble();
+		double D=b*b-4*a*c;
+		System.out.println("Discriminant D= "+D);
+		if(D>0){
+			System.out.println("The roots of given qudaratic equation are real and distinct.");
+			double r1=(-b+Math.sqrt(D))/(2*a);
+			double r2=(-b-Math.sqrt(D))/(2*a);
+			System.out.print("Root1= "+r1);
+			System.out.print("Root2= "+r2);
+		}
+		else if(D==0){
+			System.out.println("THe roots of given quadatic equation are real and equal.");
+			double r=-b/(2*a);
+			System.out.println("Root1=Root2= "+r);
+		}
+		else{ 
+			System.out.println("The roots of given quadratic equation are complex");
+		}		
+	}
+}	
+OUTPUT:
+Coefficient a: 1
+Coefficient b: 3
+Constant c: 6
+Discriminant D= -15.0
+The roots of given quadratic equation are complex
+Coefficient a: 1
+Coefficient b: 2
+Constant c: 1
+Discriminant D= 0.0
+THe roots of given quadatic equation are real and equal.
+Root1=Root2= -1.0
