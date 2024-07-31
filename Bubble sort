@@ -1,0 +1,28 @@
+public class BubbleSort{
+	public static void bubblesort(int[]a){
+		int n=a.length;
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n-1-i;j++){
+				if(a[j]>a[j+1]){
+					int t=a[j];
+					a[j]=a[j+1];
+					a[j+1]=t;
+				}
+			}
+		}			
+	}
+	public static void main(String[]args){
+		int []a={20,40,10,5,15,25,80,0};
+		System.out.println("Before sorting: ");
+		for(int i=0;i<a.length;i++){
+			System.out.print(a[i]+" ");
+		}
+		System.out.println();
+		bubblesort(a);
+		System.out.println("After sorting: ");
+		for(int i=0;i<a.length;i++){
+			System.out.print(a[i]+" ");
+		}
+		System.out.println();
+	}
+}
