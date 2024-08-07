@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class StudentGrade{
+	public static char caluclategrade(double score){
+		if(score>=90)
+			return 'A';
+		else if(score>=80)
+			return 'B';
+		else if(score>=70)
+			return 'C';
+		else if(score>=60)
+			return 'D';
+		else
+		return 'F';			
+	}
+	public static void main (String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter name of the student: ");
+		String name=sc.nextLine();
+		System.out.print("Enter the name of subject: ");
+		String sub=sc.nextLine();
+		System.out.print("Enter score of student: ");
+		double score=sc.nextDouble();
+		char Grade=caluclategrade(score);
+		System.out.println("Name: "+name);
+		System.out.println("Grade ="+Grade);
+		sc.close();
+	}
+}
+OUTPUT:
+Enter name of the student: Sailu
+Enter the name of subject: DMGT
+Enter score of student: 78
+Name: Sailu
+Grade =C
+
